@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christián Pereira — Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=DM+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav id="navbar">
+      <div class="logo">Chris<span>PC</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#colaborar">Colaborar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Desarrollador Web Junior</p>
+          <h1>Christián Pereira Contreras</h1>
+          <p class="hero-desc">Estudiante apasionado por construir interfaces atractivas y experiencias digitales bien pensadas. Siempre aprendiendo, siempre iterando</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="openModal()">Colaborar →</button>
+            <div class="social-row">
+              <a href="https://github.com/christianpec" class="social-pill" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/christianpec" class="social-pill" target="_blank">LinkedIn</a>
+              <a href="#" class="social-pill" target="_blank">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-card">
+            <img src="perfil.jpeg" alt="Foto de perfil" />
+            <span class="hero-badge">✦ Disponible para proyectos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="reveal">
+      <p class="section-label">Trayectoria</p>
+      <h2 class="section-title">Experiencia</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <p class="tl-date">2025 — Actualidad</p>
+          <h3 class="tl-role">Desarrollador Web</h3>
+          <p class="tl-company">Universidad</p>
+          <p class="tl-desc">Desarrollo de proyectos web en contexto académico, explorando el stack completo desde el frontend hasta la base de datos.</p>
+          <ul class="tags"><li class="tag">HTML5</li><li class="tag">CSS</li><li class="tag">JavaScript</li><li class="tag">Express.js</li><li class="tag">MongoDB</li></ul>
+        </div>
+        <div class="tl-item">
+          <p class="tl-date">2023</p>
+          <h3 class="tl-role">Estudiante</h3>
+          <p class="tl-company">Colegio</p>
+          <p class="tl-desc">Adquisición de conocimientos fundamentales y primeros pasos en el mundo del desarrollo.</p>
+          <ul class="tags"><li class="tag">Ramo 1</li><li class="tag">Ramo 2</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURSOS -->
+    <section id="cursos" class="reveal">
+      <p class="section-label">Formación</p>
+      <h2 class="section-title">Cursos & Certificaciones</h2>
+      <div class="courses-grid">
+        <div class="course-card" onclick="openCert('certificados/CertificadoCPT.png')">
+          <div class="course-icon cisco">🌐</div>
+          <div class="course-body">
+            <p class="course-org">Cisco Networking Academy</p>
+            <h3 class="course-name">Cisco Packet Tracer</h3>
+            <p class="course-desc">Simulación y configuración de redes, protocolos TCP/IP, enrutamiento y switching en entornos virtuales.</p>
+            <span class="course-badge">✓ Completado — ver certificado →</span>
+          </div>
+        </div>
+        <div class="course-card" onclick="openCert('certificados/AWS.png')">
+          <div class="course-icon aws">☁️</div>
+          <div class="course-body">
+            <p class="course-org">Amazon Web Services</p>
+            <h3 class="course-name">AWS Cloud Quest: Cloud Practitioner</h3>
+            <p class="course-desc">Fundamentos de servicios cloud, arquitectura en AWS, seguridad y buenas prácticas en la nube.</p>
+            <span class="course-badge">✓ Completado — ver certificado →</span>
+          </div>
+        </div>
+        <div class="course-card" onclick="openCert('certificados/iot.png')">
+          <div class="course-icon iot">📡</div>
+          <div class="course-body">
+            <p class="course-org">Internet de las Cosas</p>
+            <h3 class="course-name">Fundamentos del IoT</h3>
+            <p class="course-desc">Conectividad de dispositivos, sensores, protocolos de comunicación y aplicaciones prácticas del ecosistema IoT.</p>
+            <span class="course-badge">En progreso 👨‍💻</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="reveal">
+      <p class="section-label">Trabajo</p>
+      <h2 class="section-title">Proyectos Personales</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Casino Virtual" />
+          </div>
+          <div class="project-body">
+            <p class="project-number">01</p>
+            <h3 class="project-name">Casino Virtual</h3>
+            <p class="project-desc">Plataforma web desarrollada en contexto académico con autenticación y lógica de juego en tiempo real.</p>
+            <div class="project-footer">
+              <ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JS</li><li class="tag">Express</li><li class="tag">MongoDB</li></ul>
+              <div class="project-links">
+                <a onclick="openDemo('https://tu-casino.com', 'Casino Virtual')" href="#">Demo</a>
+                <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portafolio" />
+          </div>
+          <div class="project-body">
+            <p class="project-number">02</p>
+            <h3 class="project-name">Portafolio</h3>
+            <p class="project-desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y maquetado web.</p>
+            <div class="project-footer">
+              <ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+              <div class="project-links">
+                <a onclick="openDemo('https://tu-portafolio.com', 'Portafolio')" href="#">Demo</a>
+                <a href="https://github.com/tu-user/portafolio" target="_blank">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLABORAR -->
+    <section class="collab-section reveal" id="colaborar">
+      <p class="section-label">Colaboración</p>
+      <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
+      <p>Cuéntame qué necesitas y encontramos la mejor forma de trabajar juntos.</p>
+      <button class="btn-collab" onclick="openModal()">Quiero colaborar →</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Christián Pereira — Todos los derechos reservados</p>
+      <div class="social-row">
+        <a href="https://github.com/Chrisp-20" class="social-pill" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/christianpec" class="social-pill" target="_blank">LinkedIn</a>
+        <a href="#" class="social-pill" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL COLABORAR -->
+  <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <p class="modal-eyebrow">Colaboración</p>
+      <h2 class="modal-title">¿En qué puedo ayudarte?</h2>
+      <p class="modal-subtitle">Selecciona el tipo de proyecto que tienes en mente.</p>
+      <div class="modal-options" id="modal-options-wrap">
+        <div class="modal-option" onclick="selectOption(this, 'wordpress')">
+          <div class="option-icon">🧩</div>
+          <div class="option-body">
+            <p class="option-title">Proyecto con WordPress</p>
+            <p class="option-desc">Sitios, blogs, tiendas online y personalización de temas y plugins.</p>
+          </div>
+          <span class="option-arrow">→</span>
+        </div>
+        <div class="modal-option" onclick="selectOption(this, 'frontend-backend')">
+          <div class="option-icon">⚡</div>
+          <div class="option-body">
+            <p class="option-title">Frontend o Backend</p>
+            <p class="option-desc">Interfaces web modernas o APIs y lógica de servidor según lo que necesites.</p>
+          </div>
+          <span class="option-arrow">→</span>
+        </div>
+        <div class="modal-option" onclick="selectOption(this, 'fullstack')">
+          <div class="option-icon">🚀</div>
+          <div class="option-body">
+            <p class="option-title">Fullstack</p>
+            <p class="option-desc">Desarrollo completo de principio a fin: diseño, frontend, backend y base de datos.</p>
+          </div>
+          <span class="option-arrow">→</span>
+        </div>
+      </div>
+      <!-- Paso 2 -->
+      <div class="modal-step2" id="modalStep2" style="display:none">
+        <p class="modal-subtitle">Cuéntame más sobre tu proyecto 👇</p>
+        <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" />
+        <input type="email" id="clientEmail" placeholder="Tu correo (para responderte)" class="modal-input" />
+        <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+        <button class="btn-send" id="btnSend" onclick="sendSelection()" disabled>Continuar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX CERTIFICADOS -->
+  <div class="cert-overlay" id="certOverlay" onclick="closeCertOverlay(event)">
+    <div class="cert-box">
+      <button class="cert-close" onclick="closeCert()">✕</button>
+      <iframe id="certFrame" src="" frameborder="0" style="display:none"></iframe>
+      <img id="certImage" src="" style="display:none; width:100%; height:100%; object-fit:contain; padding:1rem;" />
+    </div>
+  </div>
+
+  <!-- DEMO PROYECTOS -->
+  <div class="demo-overlay" id="demoOverlay">
+    <div class="demo-header">
+      <span class="demo-title" id="demoTitle">Demo</span>
+      <button class="demo-close" onclick="closeDemo()">✕ Cerrar</button>
+    </div>
+    <iframe id="demoFrame" src="" frameborder="0"></iframe>
+  </div>
+
+  <div class="toast" id="toast">¡Mensaje enviado! Te contactaré pronto ✓</div>
+
+  <script src="msi.js"></script>
+</body>
+</html>
