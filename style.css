@@ -575,7 +575,7 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
     min-height: unset;
     padding: 2rem 1.25rem 3rem;
   }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: .75rem; }
 
   /* Secciones */
   section { padding: 3rem 1.25rem; }
