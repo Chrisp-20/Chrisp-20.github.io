@@ -1,4 +1,3 @@
-// ── Reveal scroll ──────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -7,7 +6,6 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 reveals.forEach(el => io.observe(el));
 
-// ── Estado modal colaborar ─────────────────────────────────
 let selected = null;
 let step = 1;
 
@@ -17,7 +15,7 @@ const labels = {
   fullstack:          "Fullstack"
 };
 
-// ── Modal colaborar ────────────────────────────────────────
+
 function openModal() {
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -70,7 +68,7 @@ function sendSelection() {
       return;
     }
 
-    // Por ahora simula el envío — cuando tengas EmailJS reemplaza esto
+    //simulación por ahora luego emailjs :D
     closeModal();
     const toast = document.getElementById('toast');
     toast.classList.add('show');
@@ -78,7 +76,7 @@ function sendSelection() {
   }
 }
 
-// ── Certificados ───────────────────────────────────────────
+
 
 function openCert(src) {
   const isImage = /\.(png|jpg|jpeg|webp)$/i.test(src);
@@ -111,7 +109,7 @@ function closeCertOverlay(e) {
   if (e.target === document.getElementById('certOverlay')) closeCert();
 }
 
-// ── Demo proyectos ─────────────────────────────────────────
+
 function openDemo(url, title) {
   document.getElementById('demoFrame').src = url;
   document.getElementById('demoTitle').textContent = title;

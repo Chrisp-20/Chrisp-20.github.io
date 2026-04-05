@@ -32,7 +32,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ── HEADER / NAV ─────────────────────────────────────────── */
+
 header {
   position: sticky;
   top: 0;
@@ -78,7 +78,7 @@ header {
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
-/* ── HERO ─────────────────────────────────────────────────── */
+
 .hero {
   min-height: calc(100vh - 65px);
   display: flex;
@@ -179,7 +179,6 @@ header {
   box-shadow: 0 4px 14px rgba(108,99,255,0.12);
 }
 
-/* ── SECTIONS ─────────────────────────────────────────────── */
 section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 
 .section-label {
@@ -194,7 +193,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   font-weight: 400; margin-bottom: 3rem; letter-spacing: -.02em;
 }
 
-/* ── TIMELINE ─────────────────────────────────────────────── */
+
 .timeline { display: flex; flex-direction: column; position: relative; padding-left: 2rem; }
 .timeline::before {
   content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px;
@@ -217,7 +216,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   border-radius: 100px; color: var(--muted);
 }
 
-/* ── COURSES ──────────────────────────────────────────────── */
+
 .courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
 .course-card {
   background: var(--surface); border: 1px solid var(--border2); border-radius: 14px;
@@ -239,7 +238,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   background: var(--accent-light); padding: .2rem .65rem; border-radius: 100px;
 }
 
-/* ── PROJECTS ─────────────────────────────────────────────── */
+
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
 .project-card {
   background: var(--surface); border: 1px solid var(--border2); border-radius: 16px;
@@ -264,7 +263,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .project-links a:hover { color: var(--primary); border-color: var(--primary); }
 
-/* ── COLLAB ───────────────────────────────────────────────── */
+
 .collab-section { text-align: center; padding-bottom: 5rem; }
 .collab-section .section-label { justify-content: center; max-width: 300px; margin: 0 auto 1rem; }
 .collab-section .section-label::after { display: none; }
@@ -280,7 +279,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .btn-collab:hover { opacity: .88; transform: translateY(-2px); }
 
-/* ── MODAL ────────────────────────────────────────────────── */
+
 .modal-overlay {
   position: fixed; inset: 0; z-index: 500;
   background: rgba(20,24,35,0.55); backdrop-filter: blur(6px);
@@ -330,7 +329,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .btn-send:hover { opacity: .85; }
 .btn-send:disabled { opacity: .35; cursor: not-allowed; }
 
-/* MODAL INPUTS */
+
 .modal-input, .modal-textarea {
   width: 100%; padding: .75rem 1rem;
   border: 1px solid var(--border2); border-radius: 12px;
@@ -341,7 +340,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .modal-input:focus, .modal-textarea:focus { outline: none; border-color: var(--primary); }
 .modal-step2 { margin-bottom: 1.5rem; }
 
-/* ── CERT LIGHTBOX ────────────────────────────────────────── */
+
 .cert-overlay {
   position: fixed; inset: 0; z-index: 600;
   background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
@@ -365,7 +364,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .cert-close:hover { background: #dde4ff; }
 #certFrame { width: 100%; height: 100%; border: none; }
 
-/* ── DEMO OVERLAY ─────────────────────────────────────────── */
+
 .demo-overlay {
   position: fixed; inset: 0; z-index: 600;
   background: var(--bg); display: flex; flex-direction: column;
@@ -388,7 +387,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .demo-close:hover { color: var(--primary); border-color: var(--primary); }
 #demoFrame { flex: 1; width: 100%; border: none; }
 
-/* ── TOAST ────────────────────────────────────────────────── */
+
 .toast {
   position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(10px);
   background: var(--text); color: #fff; font-family: var(--mono); font-size: .8rem;
@@ -397,7 +396,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
+
 footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
 .footer-inner {
   max-width: 1200px; margin: 0 auto;
@@ -405,11 +404,11 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
 }
 .footer-copy { font-family: var(--mono); font-size: .75rem; color: var(--muted); }
 
-/* ── REVEAL ───────────────────────────────────────────────── */
+
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
+
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-image { order: -1; }
