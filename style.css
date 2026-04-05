@@ -32,7 +32,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* ── HEADER / NAV ─────────────────────────────────────────── */
+/* ── HEADER / NAV ─── */
 header {
   position: sticky; top: 0; z-index: 1000;
   backdrop-filter: blur(14px);
@@ -59,7 +59,7 @@ header {
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }
 
-/* ── HERO ─────────────────────────────────────────────────── */
+/* ── HERO ─── */
 .hero {
   min-height: calc(100vh - 65px);
   display: flex; align-items: center;
@@ -117,7 +117,7 @@ header {
   color: var(--primary); white-space: nowrap; box-shadow: 0 4px 14px rgba(108,99,255,0.12);
 }
 
-/* ── SECTIONS ─────────────────────────────────────────────── */
+/* ── Secciones ───*/
 section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .section-label {
   font-family: var(--mono); font-size: .72rem; color: var(--muted);
@@ -130,7 +130,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   font-weight: 400; margin-bottom: 3rem; letter-spacing: -.02em;
 }
 
-/* ── BENTO GRID ───────────────────────────────────────────── */
+/* ── el famoso bento grid prime ───¿ */
 .bento {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -174,7 +174,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   line-height: 1.7;
 }
 
-/* Layout específico de cada card */
+/* Layout específico para cada card, ya tu sae */
 .bento-about {
   grid-column: 1 / 3;
   grid-row: 1;
@@ -240,7 +240,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   border-radius: 100px; color: var(--muted);
 }
 
-/* Educación */
+/* mi etapa educación */
 .edu-item {
   display: flex; flex-direction: column; gap: .1rem;
   padding: .75rem 0; border-bottom: 1px solid var(--border2);
@@ -299,7 +299,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   to   { transform: translateX(0); }
 }
 
-/* Intereses */
+/* mis intereses */
 .interest-list {
   display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin-top: .75rem;
 }
@@ -311,7 +311,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .interest-icon { font-size: 1.1rem; }
 
-/* Redes */
+/* Redes o contados xd */
 .social-bento-links { display: flex; flex-direction: column; gap: .6rem; margin-top: .75rem; }
 .social-bento-item {
   display: flex; align-items: center; gap: .75rem;
@@ -335,7 +335,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .sbi-arrow { color: var(--muted); font-size: .85rem; transition: color .2s; }
 .social-bento-item:hover .sbi-arrow { color: var(--primary); }
 
-/* ── COURSES ──────────────────────────────────────────────── */
+/* ── Cursos y certi */
 .courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
 .course-card {
   background: var(--surface); border: 1px solid var(--border2); border-radius: 14px;
@@ -357,7 +357,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
   background: var(--accent-light); padding: .2rem .65rem; border-radius: 100px;
 }
 
-/* ── PROJECTS ─────────────────────────────────────────────── */
+/* ── Proyectos ──*/
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
 .project-card {
   background: var(--surface); border: 1px solid var(--border2); border-radius: 16px;
@@ -383,7 +383,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .project-links a:hover { color: var(--primary); border-color: var(--primary); }
 
-/* ── COLLAB ───────────────────────────────────────────────── */
+/* ── sección colabs :D ──*/
 .collab-section { text-align: center; padding-bottom: 5rem; }
 .collab-section .section-label { justify-content: center; max-width: 300px; margin: 0 auto 1rem; }
 .collab-section .section-label::after { display: none; }
@@ -399,7 +399,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .btn-collab:hover { opacity: .88; transform: translateY(-2px); }
 
-/* ── MODAL ────────────────────────────────────────────────── */
+/* ── config para modal ──*/
 .modal-overlay {
   position: fixed; inset: 0; z-index: 500;
   background: rgba(20,24,35,0.55); backdrop-filter: blur(6px);
@@ -454,7 +454,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .modal-input:focus, .modal-textarea:focus { outline: none; border-color: var(--primary); }
 .modal-step2 { margin-bottom: 1.5rem; }
 
-/* ── CERT LIGHTBOX ────────────────────────────────────────── */
+/* luces a las cajas */
 .cert-overlay {
   position: fixed; inset: 0; z-index: 600;
   background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
@@ -475,7 +475,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .cert-close:hover { background: #dde4ff; }
 #certFrame { width: 100%; height: 100%; border: none; }
 
-/* ── DEMO OVERLAY ─────────────────────────────────────────── */
+/* ── DEMO OVERLAY ── */
 .demo-overlay {
   position: fixed; inset: 0; z-index: 600; background: var(--bg);
   display: flex; flex-direction: column;
@@ -495,7 +495,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .demo-close:hover { color: var(--primary); border-color: var(--primary); }
 #demoFrame { flex: 1; width: 100%; border: none; }
 
-/* ── TOAST ────────────────────────────────────────────────── */
+
 .toast {
   position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(10px);
   background: var(--text); color: #fff; font-family: var(--mono); font-size: .8rem;
@@ -504,7 +504,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* ── FOOTER ───────────────────────────────────────────────── */
+/* ──footer derechos xd */
 footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
 .footer-inner {
   max-width: 1200px; margin: 0 auto;
@@ -512,23 +512,42 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
 }
 .footer-copy { font-family: var(--mono); font-size: .75rem; color: var(--muted); }
 
-/* ── REVEAL ───────────────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
+/* ── modo responsive 8D ─ */
+@media (max-width: 900px) {
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-image { order: -1; }
   .hero-card { max-width: 260px; }
 
   .bento { grid-template-columns: 1fr 1fr; }
-  .bento-about   { grid-column: 1 / 3; grid-row: auto; }
-  .bento-available { grid-column: auto; grid-row: auto; }
-  .bento-edu     { grid-column: auto; grid-row: auto; }
-  .bento-stack   { grid-column: 1 / 3; grid-row: auto; }
-  .bento-interests { grid-column: 1 / 3; grid-row: auto; }
-  .bento-social  { grid-column: 1 / 3; grid-row: auto; }
+  .bento-about    { grid-column: 1 / 3; }
+  .bento-available { grid-column: auto; }
+  .bento-edu      { grid-column: auto; }
+  .bento-stack    { grid-column: 1 / 3; }
+  .bento-interests { grid-column: 1 / 3; }
+  .bento-social   { grid-column: 1 / 3; }
+}
+
+@media (max-width: 620px) {
+  #navbar { flex-direction: column; gap: .75rem; padding: .8rem 5%; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .modal { padding: 1.75rem; }
+  .cert-box { height: 70vh; }
+
+  .bento { grid-template-columns: 1fr; }
+  .bento-about,
+  .bento-available,
+  .bento-edu,
+  .bento-stack,
+  .bento-interests,
+  .bento-social { grid-column: 1; }
+
+  .interest-list { grid-template-columns: 1fr; }
+}
 }
 @media (max-width: 620px) {
   #navbar { flex-direction: column; gap: .75rem; padding: .8rem 5%; }
