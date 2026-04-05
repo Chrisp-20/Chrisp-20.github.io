@@ -258,7 +258,7 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .stack-carousel {
   overflow: hidden;
   margin-top: .75rem;
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: .6rem; 
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
