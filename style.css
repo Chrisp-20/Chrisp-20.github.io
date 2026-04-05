@@ -533,7 +533,7 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
   #navbar { flex-direction: column; gap: .75rem; padding: .8rem 5%; }
   .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
 
-  /* Hero: quitar el min-height gigante */
+  /* Hero */
   .hero {
     min-height: unset;
     padding: 2rem 1.25rem 3rem;
@@ -543,7 +543,7 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
   /* Secciones */
   section { padding: 3rem 1.25rem; }
 
-  /* Bento una columna */
+  /* Bento en una columna, porsia */
   .bento {
     grid-template-columns: 1fr;
     gap: .75rem;
@@ -559,10 +559,10 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
   }
   .bento-card { padding: 1.2rem; }
 
-  /* Intereses: 1 columna */
+  /* Intereses queda en 1 columna */
   .interest-list { grid-template-columns: 1fr; }
 
-  /* Carrusel: fix de overflow */
+  /* Carrusel: evitar overflow uff*/
   .bento-stack,
   .stack-carousel {
     overflow: hidden;
