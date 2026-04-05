@@ -115,6 +115,25 @@ header {
   background: #fff; border: 1px solid var(--border2); border-radius: 100px;
   padding: .4rem 1rem; font-family: var(--mono); font-size: .72rem;
   color: var(--primary); white-space: nowrap; box-shadow: 0 4px 14px rgba(108,99,255,0.12);
+
+}
+/* diseño al botón de descagar cv*/
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  padding: .35rem .9rem;
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: .90rem;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.btn-cv:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--accent-light);
 }
 
 /* ── Secciones ───*/
