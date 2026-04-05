@@ -154,7 +154,7 @@ header {
 }
 .social-pill:hover { color: var(--primary); border-color: var(--primary); background: var(--accent-light); }
 
-/* HERO PHOTO */
+
 .hero-image { display: flex; justify-content: center; }
 .hero-card {
   position: relative;
