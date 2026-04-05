@@ -68,7 +68,7 @@ function sendSelection() {
       return;
     }
 
-    //simulación por ahora luego emailjs :D
+    
     closeModal();
     const toast = document.getElementById('toast');
     toast.classList.add('show');
@@ -105,7 +105,6 @@ function closeCert() {
 }
 
 function closeCertOverlay(e) {
-  // Cierra solo si el clic fue en el fondo oscuro, no dentro del cert-box
   if (e.target === document.getElementById('certOverlay')) closeCert();
 }
 
@@ -123,7 +122,7 @@ function closeDemo() {
   document.body.style.overflow = '';
 }
 
-// ── Teclado ────────────────────────────────────────────────
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeModal();
