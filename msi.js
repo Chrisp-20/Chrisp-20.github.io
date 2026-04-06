@@ -9,13 +9,6 @@ reveals.forEach(el => io.observe(el));
 let selected = null;
 let step = 1;
 
-const labels = {
-  wordpress:          "Proyecto con WordPress",
-  "frontend-backend": "Frontend o Backend",
-  fullstack:          "Fullstack"
-};
-
-
 function openModal() {
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -47,7 +40,7 @@ function handleOverlayClick(e) {
 function selectOption(el, value) {
   document.querySelectorAll('.modal-option').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
-  selected = value;
+  selectedOption = value; 
   document.getElementById('btnSend').disabled = false;
 }
 
@@ -56,19 +49,55 @@ function sendSelection() {
     step = 2;
     document.getElementById('modal-options-wrap').style.display = 'none';
     document.getElementById('modalStep2').style.display = 'block';
-    document.getElementById('btnSend').textContent = 'Enviar mensaje →';
+    document.getElementById('btnSend').textContent = 'Enviar por WhatsApp →';
     document.getElementById('btnSend').disabled = false;
   } else {
-    const name    = document.getElementById('clientName').value.trim();
-    const email   = document.getElementById('clientEmail').value.trim();
-    const message = document.getElementById('clientMessage').value.trim();
+    const nameEl    = document.getElementById('clientName');
+    const messageEl = document.getElementById('clientMessage');
 
-    if (!name || !email || !message) {
-      alert('Por favor completa todos los campos.');
-      return;
+    // Limpiar errores previos
+    [nameEl, messageEl].forEach(el => {
+      const prev = el.nextElementSibling;
+      if (prev && prev.classList.contains('field-error')) prev.remove();
+    });
+
+    let valid = true;
+
+    function showError(el, msg) {
+      el.style.borderColor = '#ef4444';
+      const err = document.createElement('p');
+      err.className = 'field-error';
+      err.textContent = msg;
+      err.style.cssText = 'color:#ef4444;font-size:.75rem;margin:-4px 0 8px 4px;font-family:var(--mono)';
+      el.insertAdjacentElement('afterend', err);
+      valid = false;
     }
 
-    
+    if (!nameEl.value.trim())                      showError(nameEl, 'El nombre es requerido');
+    if (!messageEl.value.trim())                   showError(messageEl, 'El mensaje es requerido');
+
+    if (!valid) return;
+
+    // Etiquetas legibles para cada opción
+    const opcionLabels = {
+      'wordpress':        'Desarrollo Web Frontend',
+      'frontend-backend': 'Proyectos IoT y Hardware',
+      'fullstack':        'Prácticas y Pasantías'
+    };
+
+    const opcionElegida = opcionLabels[selectedOption] || 'un proyecto';
+    const nombre  = nameEl.value.trim();
+    const mensaje = messageEl.value.trim();
+
+    const texto = `Hola Christián, soy ${nombre}. Me interesa colaborar en un proyecto de ${opcionElegida}. Mensaje: ${mensaje}`;
+    const url   = `https://wa.me/56964903261?text=${encodeURIComponent(texto)}`;
+
+    const link = document.createElement('a');
+    link.href   = url;
+    link.target = '_blank';
+    link.rel    = 'noopener noreferrer';
+    link.click();
+
     closeModal();
     const toast = document.getElementById('toast');
     toast.classList.add('show');
@@ -76,12 +105,20 @@ function sendSelection() {
   }
 }
 
+function openCasinoModal() {
+  document.getElementById('casinoOverlay').classList.add('open');
+}
+
+function closeCasinoModal(e) {
+  if (e && e.target !== document.getElementById('casinoOverlay')) return;
+  document.getElementById('casinoOverlay').classList.remove('open');
+}
 
 
 function openCert(src) {
   const isImage = /\.(png|jpg|jpeg|webp)$/i.test(src);
   const frame = document.getElementById('certFrame');
-  const img   = document.getElementById('certImage');
+  const img = document.getElementById('certImage');
 
   if (isImage) {
     frame.style.display = 'none';
@@ -123,6 +160,7 @@ function closeDemo() {
 }
 
 
+
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeModal();
@@ -130,3 +168,18 @@ document.addEventListener('keydown', e => {
     closeDemo();
   }
 });
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  document.getElementById('darkIcon').textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Recordar preferencia al cargar
+(function () {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (saved === 'dark' || (!saved && prefersDark)) {
+    document.body.classList.add('dark');
+    document.getElementById('darkIcon').textContent = '☀️';
+  }
+})();

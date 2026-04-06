@@ -42,10 +42,6 @@
           <a href="certificadosydocs/CV_Christián_Pereira_Contreras.pdf" download class="btn-cv">
             Descargar CV 📥
           </a>
-          <a href="https://wa.me/56964903261?text=Hola%20Christián,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
-            target="_blank" class="btn-whatsapp">
-            Hablemos por WhatsApp 🟢
-          </a>
         </div>
 
         <div class="hero-image">
@@ -116,7 +112,7 @@
               <span class="stack-chip chip-web">JavaScript</span>
               <span class="stack-chip chip-tools">Git/Github</span>
               <span class="stack-chip chip-tools">Linux/Terminal</span>
-              <span class="stack-chip chip-db">MongoDB/PostgreSQL</span>
+
               <!-- Duplicado -->
               <span class="stack-chip chip-lang">C++</span>
               <span class="stack-chip chip-lang">Java</span>
@@ -126,22 +122,19 @@
               <span class="stack-chip chip-web">JavaScript</span>
               <span class="stack-chip chip-tools">Git/Github</span>
               <span class="stack-chip chip-tools">Linux/Terminal</span>
-              <span class="stack-chip chip-db">MongoDB/PostgreSQL</span>
             </div>
             <div class="stack-track stack-track-reverse">
-              <span class="stack-chip chip-web">Express.js</span>
               <span class="stack-chip chip-web">Node.js</span>
+              <span class="stack-chip chip-db">MongoDB/PostgreSQL</span>
               <span class="stack-chip chip-tools">NPM</span>
-              <span class="stack-chip chip-tools">Rest APIs</span>
               <span class="stack-chip chip-cloud">AWS</span>
               <span class="stack-chip chip-cloud">Cisco Packet Tracer</span>
               <span class="stack-chip chip-cloud">IoT</span>
               <span class="stack-chip chip-tools">Power BI</span>
               <!-- Duplicado -->
-              <span class="stack-chip chip-web">Express.js</span>
               <span class="stack-chip chip-web">Node.js</span>
+              <span class="stack-chip chip-db">MongoDB/PostgreSQL</span>
               <span class="stack-chip chip-tools">NPM</span>
-              <span class="stack-chip chip-tools">Rest APIs</span>
               <span class="stack-chip chip-cloud">AWS</span>
               <span class="stack-chip chip-cloud">Cisco Packet Tracer</span>
               <span class="stack-chip chip-cloud">IoT</span>
@@ -235,34 +228,34 @@
       <p class="section-label">Formación</p>
       <h2 class="section-title">Cursos & Certificaciones</h2>
       <div class="courses-grid">
-        <div class="course-card" onclick="openCert('certificados/CertificadoCPT.png')">
+        <div class="course-card" onclick="openCert('certificadosydocs/CertificadoCPT.png')">
           <div class="course-icon cisco">🌐</div>
           <div class="course-body">
             <p class="course-org">Cisco Networking Academy</p>
             <h3 class="course-name">Cisco Packet Tracer</h3>
             <p class="course-desc">Simulación y configuración de redes, protocolos TCP/IP, enrutamiento y switching en
               entornos virtuales.</p>
-            <span class="course-badge">✓ Completado — ver certificado →</span>
+            <span class="course-badge">✓ Completado — ver certificado</span>
           </div>
         </div>
-        <div class="course-card" onclick="openCert('certificados/AWS.png')">
+        <div class="course-card" onclick="openCert('certificadosydocs/AWS.png')">
           <div class="course-icon aws">☁️</div>
           <div class="course-body">
             <p class="course-org">Amazon Web Services</p>
             <h3 class="course-name">AWS Cloud Quest: Cloud Practitioner</h3>
             <p class="course-desc">Fundamentos de servicios cloud, arquitectura en AWS, seguridad y buenas prácticas en
               la nube.</p>
-            <span class="course-badge">✓ Completado — ver certificado →</span>
+            <span class="course-badge">✓ Completado — ver certificado</span>
           </div>
         </div>
-        <div class="course-card" onclick="openCert('certificados/iot.png')">
+        <div class="course-card" onclick="openCert('certificadosydocs/iot.png')">
           <div class="course-icon iot">📡</div>
           <div class="course-body">
             <p class="course-org">Internet de las Cosas</p>
             <h3 class="course-name">Fundamentos del IoT</h3>
             <p class="course-desc">Conectividad de dispositivos, sensores, protocolos de comunicación y aplicaciones
               prácticas del ecosistema IoT.</p>
-            <span class="course-badge">✓ Completado — ver certificado →</span>
+            <span class="course-badge"> En progreso... </span>
           </div>
         </div>
       </div>
@@ -292,7 +285,7 @@
                 <li class="tag">MongoDB</li>
               </ul>
               <div class="project-links">
-                <a onclick="openDemo('https://tu-casino.com', 'Casino Virtual')" href="#">Demo</a>
+                <a onclick="openCasinoModal()">Demo</a>
                 <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
               </div>
             </div>
@@ -315,7 +308,8 @@
                 <li class="tag">JavaScript</li>
               </ul>
               <div class="project-links">
-                <a onclick="openDemo('https://tu-portafolio.com', 'Portafolio')" href="#">Demo</a>
+                <a href="https://chrisp-20.github.io/" target="_blank" rel="noopener noreferrer">
+                  Demo </a>
                 <a href="https://github.com/Chrisp-20/Chrisp-20.github.io" target="_blank">Code</a>
               </div>
             </div>
@@ -334,17 +328,6 @@
 
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 Christián Pereira — Todos los derechos reservados</p>
-      <div class="social-row">
-        <a href="https://github.com/Chrisp-20" class="social-pill" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/christianpec" class="social-pill" target="_blank">LinkedIn</a>
-        <a href="#" class="social-pill" target="_blank">Instagram</a>
-      </div>
-    </div>
-  </footer>
-
   <!-- Modal de la secc colaborar -->
   <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
     <div class="modal">
@@ -355,34 +338,37 @@
         <div class="modal-option" onclick="selectOption(this, 'wordpress')">
           <div class="option-icon">🧩</div>
           <div class="option-body">
-            <p class="option-title">Proyecto con WordPress</p>
-            <p class="option-desc">Sitios, blogs, tiendas online y personalización de temas y plugins.</p>
+            <p class="option-title">Desarrollo Web Frontend</p>
+            <p class="option-desc">Creación de interfaces responsivas y modernas utilizando HTML, CSS y JavaScript.</p>
           </div>
           <span class="option-arrow">→</span>
         </div>
         <div class="modal-option" onclick="selectOption(this, 'frontend-backend')">
           <div class="option-icon">⚡</div>
           <div class="option-body">
-            <p class="option-title">Frontend o Backend</p>
-            <p class="option-desc">Interfaces web modernas o APIs y lógica de servidor según lo que necesites.</p>
+            <p class="option-title">Proyectos IoT y Hardware</p>
+            <p class="option-desc">Integración de sensores, microcontroladores y conectividad para soluciones
+              inteligentes.</p>
           </div>
           <span class="option-arrow">→</span>
         </div>
         <div class="modal-option" onclick="selectOption(this, 'fullstack')">
           <div class="option-icon">🚀</div>
           <div class="option-body">
-            <p class="option-title">Fullstack</p>
-            <p class="option-desc">Desarrollo completo de principio a fin: diseño, frontend, backend y base de datos.
+            <p class="option-title">Prácticas y Pasantías</p>
+            <p class="option-desc">Disponible para sumarme a equipos de ingeniería y aportar con soluciones técnicas.
             </p>
           </div>
           <span class="option-arrow">→</span>
         </div>
       </div>
       <div class="modal-step2" id="modalStep2" style="display:none">
-        <p class="modal-subtitle">Cuéntame más sobre tu proyecto 👇</p>
-        <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" />
-        <input type="email" id="clientEmail" placeholder="Tu correo (para responderte)" class="modal-input" />
-        <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4"></textarea>
+        <p class="modal-subtitle">Cuéntame más sobre qué necesitas 👇</p>
+        <form id="contactForm" novalidate>
+          <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required />
+          <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4"
+            required></textarea>
+        </form>
       </div>
       <div class="modal-footer">
         <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
@@ -409,9 +395,66 @@
     <iframe id="demoFrame" src="" frameborder="0"></iframe>
   </div>
 
-  <div class="toast" id="toast">¡Mensaje enviado! Te contactaré pronto ✓</div>
+  <!-- Modal Casino Demo -->
+  <div class="casino-overlay" id="casinoOverlay" onclick="closeCasinoModal(event)">
+    <div class="casino-modal">
+      <div class="casino-header">
+        <span class="casino-emoji">🎰</span>
+        <h3 class="casino-title">Antes de entrar...</h3>
+      </div>
+
+      <div class="casino-alert">
+        <span class="casino-alert-icon">⏳</span>
+        <div>
+          <p class="casino-alert-title">Servidor en modo reposo</p>
+          <p class="casino-alert-desc">El servidor gratuito puede tardar <strong>30–40 segundos</strong> en "despertar".
+            Tenga paciencia :D</p>
+        </div>
+      </div>
+
+      <div class="casino-credentials">
+        <p class="casino-cred-label">🃏 Cuenta de prueba</p>
+        <div class="casino-cred-row">
+          <span class="casino-cred-key">Usuario(mail):</span>
+          <code class="casino-cred-val">invitado@invitado.com</code>
+        </div>
+        <div class="casino-cred-row">
+          <span class="casino-cred-key">Contraseña</span>
+          <code class="casino-cred-val">invi1234</code>
+        </div>
+      </div>
+
+      <div class="casino-footer">
+        <button class="casino-btn-cancel" onclick="closeCasinoModal()">Cerrar</button>
+        <a class="casino-btn-demo" href="https://casino-virtual-e4jo.onrender.com/" target="_blank" rel="noopener noreferrer"
+          onclick="closeCasinoModal()">
+          Ir al Casino Virtual
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Christián Pereira — Todos los derechos reservados</p>
+      <div class="social-row">
+        <a href="https://github.com/Chrisp-20" class="social-pill" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/christianpec" class="social-pill" target="_blank">LinkedIn</a>
+        <a href="#" class="social-pill" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <p style="font-size: 0.75rem; color: #888; text-align: center;">
+      🚧 Sitio en construcción | Aprendiendo y mejorando cada día.
+    </p>
+  </footer>
 
   <script src="msi.js"></script>
+
+  <!-- modo oscuro :D -->
+<button class="dark-toggle" id="darkToggle" onclick="toggleDark()" aria-label="Cambiar modo">
+  <span id="darkIcon">🌙</span>
+</button>
 </body>
 
 </html>

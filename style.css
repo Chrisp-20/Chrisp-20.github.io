@@ -135,24 +135,6 @@ header {
   border-color: var(--primary);
   background: var(--accent-light);
 }
-/*diseño para botón wsp*/
-.btn-whatsapp{
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  border: 1px solid var(--border2);
-  color: var(--muted);
-  padding: .35rem .9rem;
-  border-radius: 100px;
-  font-family: var(--mono);
-  font-size: .90rem;
-  transition: color .2s, border-color .2s, background .2s;
-}
-.btn-whatsapp:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  background: var(--accent-light);
-}
 
 /* ── Secciones ───*/
 section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
@@ -491,6 +473,107 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 .modal-input:focus, .modal-textarea:focus { outline: none; border-color: var(--primary); }
 .modal-step2 { margin-bottom: 1.5rem; }
 
+/* ── Modal Casino ── */
+.casino-overlay {
+  position: fixed; inset: 0; z-index: 700;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s;
+}
+.casino-overlay.open { opacity: 1; pointer-events: all; }
+
+.casino-modal {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 420px; width: 100%;
+  box-shadow: var(--shadow);
+  transform: translateY(16px) scale(0.97);
+  transition: transform .3s;
+}
+.casino-overlay.open .casino-modal { transform: translateY(0) scale(1); }
+
+.casino-header {
+  display: flex; align-items: center; gap: .75rem;
+  margin-bottom: 1.5rem;
+}
+.casino-emoji { font-size: 1.6rem; }
+.casino-title {
+  font-family: var(--serif);
+  font-size: 1.4rem; font-weight: 400;
+  color: var(--text); margin: 0;
+}
+
+.casino-alert {
+  display: flex; gap: .85rem; align-items: flex-start;
+  background: var(--accent-light);
+  border: 1px solid var(--border2);
+  border-radius: 12px; padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.casino-alert-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: .1rem; }
+.casino-alert-title {
+  font-size: .88rem; font-weight: 600;
+  color: var(--primary); margin-bottom: .25rem;
+}
+.casino-alert-desc {
+  font-size: .82rem; color: var(--muted);
+  line-height: 1.6; margin: 0;
+}
+.casino-alert-desc strong { color: var(--text); }
+
+.casino-credentials {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 12px; padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+.casino-cred-label {
+  font-size: .75rem; color: var(--muted);
+  font-family: var(--mono); letter-spacing: .08em;
+  text-transform: uppercase; margin-bottom: .75rem;
+}
+.casino-cred-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--border2);
+}
+.casino-cred-row:last-child { border-bottom: none; padding-bottom: 0; }
+.casino-cred-key { font-size: .83rem; color: var(--muted); }
+.casino-cred-val {
+  font-family: var(--mono); font-size: .85rem;
+  background: var(--accent-light); color: var(--primary);
+  padding: .2rem .65rem; border-radius: 6px;
+  border: 1px solid var(--border2);
+}
+
+.casino-footer {
+  display: flex; gap: .75rem; justify-content: flex-end;
+}
+.casino-btn-cancel {
+  background: none; border: 1px solid var(--border2);
+  color: var(--muted); padding: .6rem 1.25rem;
+  border-radius: 100px; font-size: .85rem;
+  cursor: pointer; font-family: var(--sans);
+  transition: color .2s, border-color .2s;
+}
+.casino-btn-cancel:hover { color: var(--text); border-color: var(--primary); }
+
+.casino-btn-demo {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #fff; padding: .6rem 1.5rem;
+  border-radius: 100px; font-size: .88rem; font-weight: 700;
+  cursor: pointer; font-family: var(--sans);
+  transition: opacity .2s, transform .2s;
+  box-shadow: 0 6px 20px rgba(108,99,255,0.3);
+}
+.casino-btn-demo:hover { opacity: .88; transform: translateY(-2px); }
+
 /* luces a las cajas */
 .cert-overlay {
   position: fixed; inset: 0; z-index: 600;
@@ -611,4 +694,89 @@ footer { border-top: 1px solid var(--border2); padding: 2rem 5%; }
   .footer-inner { flex-direction: column; text-align: center; }
   .modal { padding: 1.25rem; }
   .cert-box { height: 70vh; }
+}
+.interest-item {
+  transition: border-color .2s, background .2s;
+}
+
+.interest-item:hover {
+  border-color: var(--primary);
+  background: var(--accent-light);
+}
+
+.dark-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 900;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadow);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s, background .3s, border-color .2s;
+  backdrop-filter: blur(10px);
+}
+.dark-toggle:hover { transform: scale(1.1); }
+
+/* ── Variables del modo oscuro :O ── */
+body.dark {
+  --bg: #0f1117;
+  --surface: rgba(255,255,255,0.05);
+  --surface2: #1a1d27;
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.1);
+  --text: #e8eaf0;
+  --muted:  #b0b7c9;;
+  --shadow: 0 18px 50px rgba(0,0,0,0.4);
+  --accent-light: rgba(108,99,255,0.15);
+
+  background:
+    radial-gradient(circle at top left, rgba(108,99,255,.08), transparent 25%),
+    radial-gradient(circle at top right, rgba(0,174,255,.05), transparent 22%),
+    linear-gradient(180deg, #0f1117 0%, #13161f 100%);
+}
+
+body.dark header {
+  background: rgba(15,17,23,0.85);
+}
+
+body.dark .hero-card {
+  background: rgba(255,255,255,0.06);
+}
+
+body.dark .modal {
+  background: #1a1d27;
+}
+
+body.dark .casino-modal {
+  background: #1a1d27;
+}
+body.dark .course-badge {
+  background: rgba(108,99,255,0.25);
+  color: #a89fff;
+}
+
+body.dark .bento-chips span,
+body.dark .tag {
+  background: rgba(255,255,255,0.08);
+  color: #b0b7c9;
+}
+body.dark .interest-item {
+  transition: border-color .2s, background .2s;
+}
+
+body.dark .interest-item:hover {
+  border-color: var(--primary);
+  background: rgba(108,99,255,0.15);
+  color: #fff;
+}
+body.dark .edu-year {
+  color: #a89fff;
+}
+body.dark .course-org {
+  color: #a89fff;
 }
