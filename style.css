@@ -303,11 +303,11 @@ section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
 }
 .stack-chip:hover { transform: scale(1.08); }
 
-.chip-lang  { background: #ede9fe; color: #6d28d9; border-color: #dac1d9; }
-.chip-web   { background: #dbeafe; color: #1d4ed8; border-color: #c1d5d8; }
-.chip-db    { background: #dcfce7; color: #15803d; border-color: #c0f1df; }
+.chip-lang  { background: #ede9fe; color: #6d28d9; border-color: #f7f1f7; }
+.chip-web   { background: #dbeafe; color: #1d4ed8; border-color: #ffffff; }
+.chip-db    { background: #dcfce7; color: #15803d; border-color: #ffffff; }
 .chip-tools { background: #2b04b9; color: #ffffff; border-color: #142ab5; }
-.chip-cloud { background: #2fcbb9; color: #ffffff; border-color: #11c6a5; }
+.chip-cloud { background: #2fcbb9; color: #ffffff; border-color: #82c7ba; }
 
 .stack-track-reverse {
   animation: scroll-chips-reverse 20s linear infinite;
