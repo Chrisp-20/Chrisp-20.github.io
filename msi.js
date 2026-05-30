@@ -9,6 +9,14 @@ reveals.forEach(el => io.observe(el));
 let selected = null;
 let step = 1;
 
+// ── Tabs de proyectos ──
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
 function openModal() {
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -29,7 +37,6 @@ function resetModal() {
   document.getElementById('modalStep2').style.display = 'none';
   document.getElementById('modal-options-wrap').style.display = 'flex';
   document.getElementById('clientName').value = '';
-  document.getElementById('clientEmail').value = '';
   document.getElementById('clientMessage').value = '';
 }
 
@@ -40,7 +47,7 @@ function handleOverlayClick(e) {
 function selectOption(el, value) {
   document.querySelectorAll('.modal-option').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
-  selectedOption = value; 
+  selectedOption = value;
   document.getElementById('btnSend').disabled = false;
 }
 
@@ -55,7 +62,6 @@ function sendSelection() {
     const nameEl    = document.getElementById('clientName');
     const messageEl = document.getElementById('clientMessage');
 
-    // Limpiar errores previos
     [nameEl, messageEl].forEach(el => {
       const prev = el.nextElementSibling;
       if (prev && prev.classList.contains('field-error')) prev.remove();
@@ -73,12 +79,11 @@ function sendSelection() {
       valid = false;
     }
 
-    if (!nameEl.value.trim())                      showError(nameEl, 'El nombre es requerido');
-    if (!messageEl.value.trim())                   showError(messageEl, 'El mensaje es requerido');
+    if (!nameEl.value.trim())    showError(nameEl, 'El nombre es requerido');
+    if (!messageEl.value.trim()) showError(messageEl, 'El mensaje es requerido');
 
     if (!valid) return;
 
-    // Etiquetas legibles para cada opción
     const opcionLabels = {
       'wordpress':        'Desarrollo Web Frontend',
       'frontend-backend': 'Proyectos IoT y Hardware',
@@ -114,7 +119,6 @@ function closeCasinoModal(e) {
   document.getElementById('casinoOverlay').classList.remove('open');
 }
 
-
 function openCert(src) {
   const isImage = /\.(png|jpg|jpeg|webp)$/i.test(src);
   const frame = document.getElementById('certFrame');
@@ -145,7 +149,6 @@ function closeCertOverlay(e) {
   if (e.target === document.getElementById('certOverlay')) closeCert();
 }
 
-
 function openDemo(url, title) {
   document.getElementById('demoFrame').src = url;
   document.getElementById('demoTitle').textContent = title;
@@ -159,8 +162,6 @@ function closeDemo() {
   document.body.style.overflow = '';
 }
 
-
-
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeModal();
@@ -168,13 +169,13 @@ document.addEventListener('keydown', e => {
     closeDemo();
   }
 });
+
 function toggleDark() {
   const isDark = document.body.classList.toggle('dark');
   document.getElementById('darkIcon').textContent = isDark ? '☀️' : '🌙';
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-// Recordar preferencia al cargar
 (function () {
   const saved = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

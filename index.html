@@ -270,61 +270,123 @@
     </section>
 
 
-    <section id="proyectos" class="reveal">
+  <section id="proyectos" class="reveal">
       <p class="section-label">Trabajo</p>
       <h2 class="section-title">Proyectos Personales</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="certificadosydocs/Casino.png" alt="Casino Virtual" />
-          </div>
-          <div class="project-body">
-            <p class="project-number">01</p>
-            <h3 class="project-name">Casino Virtual</h3>
-            <p class="project-desc">Plataforma web desarrollada en contexto académico con autenticación y lógica de
-              juego en tiempo real.</p>
-            <div class="project-footer">
-              <ul class="tags">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">JS</li>
-                <li class="tag">Express</li>
-                <li class="tag">MongoDB</li>
-              </ul>
-              <div class="project-links">
-                <a onclick="openCasinoModal()">Demo</a>
-                <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
+ 
+      <!-- Tabs de categorías -->
+      <div class="tabs-wrap">
+        <button class="tab-btn active" onclick="switchTab('all', this)">
+          Todos <span class="tab-count">2</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('web', this)">
+          🌐 Web <span class="tab-count">2</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('iot', this)">
+          📡 IoT / Hardware <span class="tab-count">0</span>
+        </button>
+      </div>
+ 
+      <!-- Panel: Todos -->
+      <div id="tab-all" class="tab-panel active">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="certificadosydocs/Casino.png" alt="Casino Virtual" />
+            </div>
+            <div class="project-body">
+              <p class="project-number">01</p>
+              <h3 class="project-name">Casino Virtual</h3>
+              <p class="project-desc">Plataforma web desarrollada en contexto académico con autenticación y lógica de juego en tiempo real.</p>
+              <div class="project-footer">
+                <ul class="tags">
+                  <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JS</li>
+                  <li class="tag">Express</li><li class="tag">MongoDB</li>
+                </ul>
+                <div class="project-links">
+                  <a onclick="openCasinoModal()">Demo</a>
+                  <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-              alt="Portafolio" />
-          </div>
-          <div class="project-body">
-            <p class="project-number">02</p>
-            <h3 class="project-name">Portafolio</h3>
-            <p class="project-desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y
-              maquetado web.</p>
-            <div class="project-footer">
-              <ul class="tags">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">JavaScript</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://chrisp-20.github.io/" target="_blank" rel="noopener noreferrer">
-                  Demo </a>
-                <a href="https://github.com/Chrisp-20/Chrisp-20.github.io" target="_blank">Code</a>
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portafolio" />
+            </div>
+            <div class="project-body">
+              <p class="project-number">02</p>
+              <h3 class="project-name">Portafolio</h3>
+              <p class="project-desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y maquetado web.</p>
+              <div class="project-footer">
+                <ul class="tags">
+                  <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://chrisp-20.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
+                  <a href="https://github.com/Chrisp-20/Chrisp-20.github.io" target="_blank">Code</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+ 
+      <!-- Panel: Web -->
+      <div id="tab-web" class="tab-panel">
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="certificadosydocs/Casino.png" alt="Casino Virtual" />
+            </div>
+            <div class="project-body">
+              <p class="project-number">01</p>
+              <h3 class="project-name">Casino Virtual</h3>
+              <p class="project-desc">Plataforma web desarrollada en contexto académico con autenticación y lógica de juego en tiempo real.</p>
+              <div class="project-footer">
+                <ul class="tags">
+                  <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JS</li>
+                  <li class="tag">Express</li><li class="tag">MongoDB</li>
+                </ul>
+                <div class="project-links">
+                  <a onclick="openCasinoModal()">Demo</a>
+                  <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portafolio" />
+            </div>
+            <div class="project-body">
+              <p class="project-number">02</p>
+              <h3 class="project-name">Portafolio</h3>
+              <p class="project-desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y maquetado web.</p>
+              <div class="project-footer">
+                <ul class="tags">
+                  <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://chrisp-20.github.io/" target="_blank" rel="noopener noreferrer">Demo</a>
+                  <a href="https://github.com/Chrisp-20/Chrisp-20.github.io" target="_blank">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Panel: IoT / Hardware -->
+      <div id="tab-iot" class="tab-panel">
+        <div class="tab-empty">
+          <span>📡</span>
+          <p>Proyectos IoT próximamente</p>
+        </div>
+      </div>
+ 
     </section>
-
+    
     <!-- Colaboración :O -->
     <section class="collab-section reveal" id="colaborar">
       <p class="section-label">Colaboración</p>
