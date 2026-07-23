@@ -623,3 +623,227 @@ body.dark .tab-btn { background: rgba(255,255,255,0.05); }
 body.dark .tab-btn:hover { background: rgba(108,99,255,0.15); }
 body.dark .tab-btn.active { background: var(--primary); }
 body.dark .tab-empty { background: rgba(255,255,255,0.03); }
+
+/* ── Grilla 2x2 de áreas ── */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.area-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(108,99,255,0.3);
+}
+
+.area-card-header {
+  padding: .85rem 1.2rem .7rem;
+  border-bottom: 1px solid var(--border2);
+}
+.area-card-label {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+/* Proyecto destacado dentro de la tarjeta */
+.area-card-project {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.area-card-project .project-img-wrap {
+  height: 160px;
+}
+.area-card-project .project-body {
+  padding: 1.1rem 1.2rem;
+}
+.area-card-project .project-desc {
+  font-size: .84rem;
+  margin-bottom: .9rem;
+}
+
+/* Estado vacío */
+.area-card-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: 2.5rem 1rem;
+  color: var(--muted);
+}
+.area-card-empty i {
+  font-size: 2.2rem;
+  opacity: .4;
+}
+.area-card-empty p {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+/* Footer de tarjeta */
+.area-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1.2rem;
+  border-top: 1px solid var(--border2);
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--primary);
+  transition: background .2s, color .2s;
+  cursor: pointer;
+}
+.area-card-footer:hover {
+  background: var(--accent-light);
+}
+.area-card-footer--muted {
+  color: var(--muted);
+  cursor: default;
+  font-style: italic;
+}
+.area-card-footer--muted:hover {
+  background: none;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Agregar al final de style.css ── */
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.area-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.area-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(108,99,255,0.3);
+}
+
+.area-card-header {
+  padding: .85rem 1.2rem .7rem;
+  border-bottom: 1px solid var(--border2);
+}
+.area-card-label {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+
+.area-card-project {
+  display: flex;
+  flex-direction: column;
+}
+.area-card-project .project-img-wrap {
+  height: 160px;
+}
+.area-card-project .project-body {
+  padding: 1.1rem 1.2rem;
+}
+.area-card-project .project-desc {
+  font-size: .84rem;
+  margin-bottom: .9rem;
+}
+
+.area-card-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: 2.5rem 1rem;
+  color: var(--muted);
+}
+.area-card-empty i {
+  font-size: 2.2rem;
+  opacity: .4;
+}
+.area-card-empty p {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+.area-card-divider {
+  height: 1px;
+  background: var(--border2);
+  margin: 0 1.2rem;
+}
+
+.area-card-extra {
+  display: none;
+}
+.area-card-extra.open {
+  display: block;
+}
+
+.area-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1.2rem;
+  border-top: 1px solid var(--border2);
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--primary);
+  transition: background .2s;
+  cursor: pointer;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  text-align: left;
+  margin-top: auto;
+}
+.area-card-footer:hover {
+  background: var(--accent-light);
+}
+
+.area-footer-arrow {
+  transition: transform .25s;
+  display: inline-block;
+}
+.area-card-footer.open .area-footer-arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 700px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -9,14 +9,6 @@ reveals.forEach(el => io.observe(el));
 let selected = null;
 let step = 1;
 
-// ── Tabs de proyectos ──
-function switchTab(id, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
-
 function openModal() {
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -123,6 +115,7 @@ function openCert(src) {
   const isImage = /\.(png|jpg|jpeg|webp)$/i.test(src);
   const frame = document.getElementById('certFrame');
   const img = document.getElementById('certImage');
+  const download = document.getElementById('certDownload');
 
   if (isImage) {
     frame.style.display = 'none';
@@ -132,6 +125,12 @@ function openCert(src) {
     img.style.display = 'none';
     frame.src = src;
     frame.style.display = 'block';
+  }
+
+  if (download) {
+    download.href = src;
+    download.setAttribute('download', src.split('/').pop());
+    download.style.display = isImage ? 'flex' : 'none';
   }
 
   document.getElementById('certOverlay').classList.add('open');
@@ -184,3 +183,18 @@ function toggleDark() {
     document.getElementById('darkIcon').textContent = '☀️';
   }
 })();
+
+function toggleExtra(area, btn) {
+  const extra = document.getElementById('extra-' + area);
+  const isOpen = extra.classList.contains('open');
+  extra.classList.toggle('open');
+  btn.classList.toggle('open');
+  const label = btn.querySelector('span:first-child');
+  const labels = {
+    'web':       ['Ver todos los proyectos web',          'Ocultar'],
+    'bi':        ['Ver todos los proyectos BI',           'Ocultar'],
+    'analitica': ['Ver todos los proyectos de analítica', 'Ocultar'],
+    'iot':       ['Ver todos los proyectos IoT',          'Ocultar'],
+  };
+  label.textContent = isOpen ? labels[area][0] : labels[area][1];
+}
