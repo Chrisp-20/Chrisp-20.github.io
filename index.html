@@ -336,16 +336,20 @@
                 </ul>
                 <div class="project-links">
                   <a onclick="openCert('certificadosydocs/InformeCryotix.pdf')">Informe</a>
-                  <a href="https://github.com/Chrisp-20/Cryotix.git" target="_blank">Code</a>
+                  <a href="https://github.com/Chrisp-20/Cryotix" target="_blank">Code</a>
                 </div>
               </div>
             </div>
           </div>
+          <div class="area-card-extra" id="extra-iot">
             <div class="area-card-divider"></div>
-            <button class="area-card-footer" onclick="toggleExtra('iot', this)">
+            <div class="area-card-empty" style="padding: 1.5rem 1rem;">
+              <p>No hay más proyectos aún</p>
+            </div>
+          </div>
+          <button class="area-card-footer" onclick="toggleExtra('iot', this)">
             <span>Ver todos los proyectos IoT</span><span class="area-footer-arrow">↓</span>
           </button>
-          </div>
         </div>
 
       </div>
@@ -399,6 +403,7 @@
           <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required />
           <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4" required></textarea>
         </form>
+        <p style="font-size: 0.75rem; opacity: 0.65; margin-top: 0.5rem;">🔒 No almaceno ni recolecto estos datos: solo se usan para armar el mensaje que se abre en tu WhatsApp.</p>
       </div>
       <div class="modal-footer">
         <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
