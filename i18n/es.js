@@ -1,4 +1,3 @@
-// Traducciones en español
 const i18n_es = {
     "nav.inicio": "Inicio",
     "nav.sobremi": "Sobre mí",

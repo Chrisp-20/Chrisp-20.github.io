@@ -43,7 +43,7 @@ function applyTranslations(lang) {
     enBtn.classList.toggle('active', lang === 'en');
   }
 
-  // Si el modal de colaborar está en el paso 2, refresca el texto del botón
+  
   const btnSend = document.getElementById('btnSend');
   const modalStep2 = document.getElementById('modalStep2');
   if (btnSend && modalStep2 && modalStep2.style.display === 'block') {

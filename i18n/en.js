@@ -1,4 +1,3 @@
-// Traducciones en inglés
 const i18n_en = {
     "nav.inicio": "Home",
     "nav.sobremi": "About",
