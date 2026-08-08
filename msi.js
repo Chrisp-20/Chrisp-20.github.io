@@ -25,7 +25,7 @@ function resetModal() {
   selected = null;
   step = 1;
   document.getElementById('btnSend').disabled = true;
-  document.getElementById('btnSend').textContent = 'Continuar →';
+  document.getElementById('btnSend').textContent = t('modal.continue');
   document.getElementById('modalStep2').style.display = 'none';
   document.getElementById('modal-options-wrap').style.display = 'flex';
   document.getElementById('clientName').value = '';
@@ -48,7 +48,7 @@ function sendSelection() {
     step = 2;
     document.getElementById('modal-options-wrap').style.display = 'none';
     document.getElementById('modalStep2').style.display = 'block';
-    document.getElementById('btnSend').textContent = 'Enviar por WhatsApp →';
+    document.getElementById('btnSend').textContent = t('modal.sendwhatsapp');
     document.getElementById('btnSend').disabled = false;
   } else {
     const nameEl    = document.getElementById('clientName');
@@ -71,22 +71,25 @@ function sendSelection() {
       valid = false;
     }
 
-    if (!nameEl.value.trim())    showError(nameEl, 'El nombre es requerido');
-    if (!messageEl.value.trim()) showError(messageEl, 'El mensaje es requerido');
+    if (!nameEl.value.trim())    showError(nameEl, t('modal.error.name'));
+    if (!messageEl.value.trim()) showError(messageEl, t('modal.error.message'));
 
     if (!valid) return;
 
     const opcionLabels = {
-      'wordpress':        'Desarrollo Web Frontend',
-      'frontend-backend': 'Proyectos IoT y Hardware',
-      'fullstack':        'Prácticas y Pasantías'
+      'wordpress':        t('modal.opt1.title'),
+      'frontend-backend': t('modal.opt2.title'),
+      'fullstack':        t('modal.opt3.title')
     };
 
-    const opcionElegida = opcionLabels[selectedOption] || 'un proyecto';
+    const opcionElegida = opcionLabels[selectedOption] || t('modal.opt.fallback');
     const nombre  = nameEl.value.trim();
     const mensaje = messageEl.value.trim();
 
-    const texto = `Hola Christián, soy ${nombre}. Me interesa colaborar en un proyecto de ${opcionElegida}. Mensaje: ${mensaje}`;
+    const texto = t('modal.whatsapp.template')
+      .replace('{nombre}', nombre)
+      .replace('{opcion}', opcionElegida)
+      .replace('{mensaje}', mensaje);
     const url   = `https://wa.me/56964903261?text=${encodeURIComponent(texto)}`;
 
     const link = document.createElement('a');
@@ -166,32 +169,17 @@ document.addEventListener('keydown', e => {
   }
 });
 
-function toggleDark() {
-  const isDark = document.body.classList.toggle('dark');
-  document.getElementById('darkIcon').textContent = isDark ? '☀️' : '🌙';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
-
-(function () {
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (saved === 'dark' || (!saved && prefersDark)) {
-    document.body.classList.add('dark');
-    document.getElementById('darkIcon').textContent = '☀️';
-  }
-})();
-
 function toggleExtra(area, btn) {
   const extra = document.getElementById('extra-' + area);
   const isOpen = extra.classList.contains('open');
   extra.classList.toggle('open');
   btn.classList.toggle('open');
   const label = btn.querySelector('span:first-child');
-  const labels = {
-    'web':       ['Ver todos los proyectos web',          'Ocultar'],
-    'bi':        ['Ver todos los proyectos BI',           'Ocultar'],
-    'analitica': ['Ver todos los proyectos de analítica', 'Ocultar'],
-    'iot':       ['Ver todos los proyectos IoT',          'Ocultar'],
+  const keys = {
+    'web':       'proyectos.web.vertodos',
+    'bi':        'proyectos.bi.vertodos',
+    'analitica': 'proyectos.analitica.vertodos',
+    'iot':       'proyectos.iot.vertodos',
   };
-  label.textContent = isOpen ? labels[area][0] : labels[area][1];
+  label.textContent = isOpen ? t(keys[area]) : t('proyectos.ocultar');
 }

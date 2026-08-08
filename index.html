@@ -19,11 +19,11 @@
     <nav id="navbar">
       <div class="logo">Christián <span> PC </span></div>
       <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#cursos">Cursos</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#colaborar">Colaborar</a></li>
+        <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav.sobremi">Sobre mí</a></li>
+        <li><a href="#cursos" data-i18n="nav.cursos">Cursos</a></li>
+        <li><a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a></li>
+        <li><a href="#colaborar" data-i18n="nav.colaborar">Colaborar</a></li>
       </ul>
     </nav>
   </header>
@@ -33,12 +33,12 @@
     <div class="hero" id="inicio">
       <div class="hero-inner">
         <div class="hero-text">
-          <span class="badge">Santiago, Chile 📍</span>
-          <h1>Armando y creando<br><em>por curiosidad</em><br> y pasión</h1>
-          <h2 class="hero-sub">Full Stack · IoT · Sistemas de punta a punta</h2>
-          <p class="hero-desc">
+          <span class="badge" data-i18n="hero.badge">Santiago, Chile 📍</span>
+          <h1 data-i18n-html="hero.h1">Armando y creando<br><em>por curiosidad</em><br> y pasión</h1>
+          <h2 class="hero-sub" data-i18n="hero.sub">Full Stack · IoT · Sistemas de punta a punta</h2>
+          <p class="hero-desc" data-i18n="hero.desc">
             Hola, soy Chris, estudiante de Ingeniería Civil en la UDP. Me gusta llevar una idea desde el diseño hasta un sistema funcionando: hardware, software y datos trabajando juntos.</p>
-          <a href="certificadosydocs/CV_Christián_Pereira_Contreras.pdf" download class="btn-cv">
+          <a href="certificadosydocs/CV_Christián_Pereira_Contreras.pdf" download class="btn-cv" data-i18n="hero.cv">
             Descargar CV 📥
           </a>
         </div>
@@ -52,45 +52,45 @@
 
     <!-- Sobre mí -->
     <section id="sobre-mi" class="reveal">
-      <p class="section-label">Información</p>
-      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-label" data-i18n="sobremi.label">Información</p>
+      <h2 class="section-title" data-i18n="sobremi.title">Sobre mí</h2>
       <div class="bento">
 
         <div class="bento-card bento-about">
-          <p class="bento-tag">👤 Sobre mí</p>
-          <h3>Hola, soy Chris</h3>
-          <p>Estudiante de Ingeniería Civil Informática y Telecomunicaciones. Lo que más disfruto es crear soluciones tecnológicas de punta a punta: pensar una idea, diseñarla, elegir los componentes, construirla y lograr que los datos que genera sean útiles para alguien. No me gusta limitarme a una sola capa (frontend, backend o hardware); prefiero entender e integrar el sistema completo.</p>
+          <p class="bento-tag" data-i18n="sobremi.about.tag">👤 Sobre mí</p>
+          <h3 data-i18n="sobremi.about.h3">Hola, soy Chris</h3>
+          <p data-i18n="sobremi.about.p">Estudiante de Ingeniería Civil Informática y Telecomunicaciones. Lo que más disfruto es crear soluciones tecnológicas de punta a punta: pensar una idea, diseñarla, elegir los componentes, construirla y lograr que los datos que genera sean útiles para alguien. No me gusta limitarme a una sola capa (frontend, backend o hardware); prefiero entender e integrar el sistema completo.</p>
           <div class="bento-chips">
-            <span>Autodidacta</span>
-            <span>Curioso</span>
-            <span>Responsable</span>
+            <span data-i18n="sobremi.about.chip1">Autodidacta</span>
+            <span data-i18n="sobremi.about.chip2">Curioso</span>
+            <span data-i18n="sobremi.about.chip3">Responsable</span>
           </div>
         </div>
 
         <div class="bento-card bento-available">
           <div class="avail-dot"></div>
-          <p class="bento-tag">Estado actual</p>
-          <h3>Open to work</h3>
-          <p>Disponible para proyectos freelance, prácticas profesionales y colaboraciones.</p>
+          <p class="bento-tag" data-i18n="sobremi.available.tag">Estado actual</p>
+          <h3 data-i18n="sobremi.available.h3">Open to work</h3>
+          <p data-i18n="sobremi.available.p">Disponible para proyectos freelance, prácticas profesionales y colaboraciones.</p>
         </div>
 
         <div class="bento-card bento-edu">
-          <p class="bento-tag">🎓 Educación</p>
+          <p class="bento-tag" data-i18n="sobremi.edu.tag">🎓 Educación</p>
           <div class="edu-item">
-            <span class="edu-year">2024 — hoy</span>
-            <strong>Ingeniería Civil en Informática y Telecomunicaciones</strong>
+            <span class="edu-year">2024 — <span data-i18n="sobremi.edu.actualidad">hoy</span></span>
+            <strong data-i18n="sobremi.edu.item1.title">Ingeniería Civil en Informática y Telecomunicaciones</strong>
             <span class="edu-place">Universidad Diego Portales</span>
           </div>
           <div class="edu-item">
             <span class="edu-year">2023</span>
-            <strong>Enseñanza Media</strong>
+            <strong data-i18n="sobremi.edu.item2.title">Enseñanza Media</strong>
             <span class="edu-place">Colegio Chile</span>
           </div>
         </div>
 
         <div class="bento-card bento-stack">
-          <p class="bento-tag">⚡ Stack</p>
-          <h3>Tecnologías</h3>
+          <p class="bento-tag" data-i18n="sobremi.stack.tag">⚡ Stack</p>
+          <h3 data-i18n="sobremi.stack.h3">Tecnologías</h3>
           <div class="stack-carousel">
             <div class="stack-track">
               <span class="stack-chip chip-lang">C++</span>
@@ -132,22 +132,22 @@
         </div>
 
         <div class="bento-card bento-interests">
-          <p class="bento-tag">🎯 Intereses</p>
+          <p class="bento-tag" data-i18n="sobremi.interests.tag">🎯 Intereses</p>
           <div class="interest-list">
-            <div class="interest-item"><span class="interest-icon">🎨</span><span>UI / UX Design</span></div>
-            <div class="interest-item"><span class="interest-icon">☁️</span><span>Cloud & DevOps</span></div>
-            <div class="interest-item"><span class="interest-icon">📡</span><span>IoT & Redes</span></div>
-            <div class="interest-item"><span class="interest-icon">🤖</span><span>Inteligencia Artificial</span></div>
-            <div class="interest-item"><span class="interest-icon">💻</span><span>Ciberseguridad</span></div>
-            <div class="interest-item"><span class="interest-icon">📷</span><span>Edición de Videos</span></div>
-            <div class="interest-item"><span class="interest-icon">🏃‍♂️</span><span>Deporte</span></div>
-            <div class="interest-item"><span class="interest-icon">🎵</span><span>Música</span></div>
+            <div class="interest-item"><span class="interest-icon">🎨</span><span data-i18n="sobremi.interests.i1">UI / UX Design</span></div>
+            <div class="interest-item"><span class="interest-icon">☁️</span><span data-i18n="sobremi.interests.i2">Cloud & DevOps</span></div>
+            <div class="interest-item"><span class="interest-icon">📡</span><span data-i18n="sobremi.interests.i3">IoT & Redes</span></div>
+            <div class="interest-item"><span class="interest-icon">🤖</span><span data-i18n="sobremi.interests.i4">Inteligencia Artificial</span></div>
+            <div class="interest-item"><span class="interest-icon">💻</span><span data-i18n="sobremi.interests.i5">Ciberseguridad</span></div>
+            <div class="interest-item"><span class="interest-icon">📷</span><span data-i18n="sobremi.interests.i6">Edición de Videos</span></div>
+            <div class="interest-item"><span class="interest-icon">🏃‍♂️</span><span data-i18n="sobremi.interests.i7">Deporte</span></div>
+            <div class="interest-item"><span class="interest-icon">🎵</span><span data-i18n="sobremi.interests.i8">Música</span></div>
           </div>
         </div>
 
         <div class="bento-card bento-social">
-          <p class="bento-tag">🔗 Contacto</p>
-          <h3>Encuéntrame en</h3>
+          <p class="bento-tag" data-i18n="sobremi.social.tag">🔗 Contacto</p>
+          <h3 data-i18n="sobremi.social.h3">Encuéntrame en</h3>
           <div class="social-bento-links">
             <a href="https://github.com/Chrisp-20" target="_blank" class="social-bento-item">
               <span class="sbi-icon">
@@ -172,7 +172,7 @@
                   <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
                 </svg>
               </span>
-              <div><strong>Gmail</strong><span>Envíame un mensaje</span></div>
+              <div><strong>Gmail</strong><span data-i18n="sobremi.social.gmail">Envíame un mensaje</span></div>
               <span class="sbi-arrow">→</span>
             </a>
           </div>
@@ -183,34 +183,37 @@
 
     <!-- Cursos -->
     <section id="cursos" class="reveal">
-      <p class="section-label">Formación</p>
-      <h2 class="section-title">Cursos & Certificaciones</h2>
+      <p class="section-label" data-i18n="cursos.label">Formación</p>
+      <h2 class="section-title" data-i18n="cursos.title">Cursos & Certificaciones</h2>
       <div class="courses-grid">
-        <div class="course-card" onclick="openCert('certificadosydocs/CertificadoCPT.png')">
+        <div class="course-card" onclick="openCert('Imagenes/CertificadoCPT.png')">
           <div class="course-icon cisco">🌐</div>
           <div class="course-body">
             <p class="course-org">Cisco Networking Academy</p>
             <h3 class="course-name">Cisco Packet Tracer</h3>
-            <p class="course-desc">Simulación y configuración de redes, protocolos TCP/IP, enrutamiento y switching en entornos virtuales.</p>
-            <span class="course-badge">✓ Completado — ver certificado</span>
+            <p class="course-desc" data-i18n="cursos.cpt.desc">Simulación y configuración de redes, protocolos TCP/IP, enrutamiento y switching en entornos virtuales.</p>
+            <span class="course-badge" data-i18n="cursos.completado">✓ Completado — ver certificado</span>
+            <span class="course-lang" data-i18n="cursos.lang.es">Curso realizado en español</span>
           </div>
         </div>
-        <div class="course-card" onclick="openCert('certificadosydocs/AWS.png')">
+        <div class="course-card" onclick="openCert('Imagenes/AWS.png')">
           <div class="course-icon aws">☁️</div>
           <div class="course-body">
             <p class="course-org">Amazon Web Services</p>
             <h3 class="course-name">AWS Cloud Quest: Cloud Practitioner</h3>
-            <p class="course-desc">Fundamentos de servicios cloud, arquitectura en AWS, seguridad y buenas prácticas en la nube.</p>
-            <span class="course-badge">✓ Completado — ver certificado</span>
+            <p class="course-desc" data-i18n="cursos.aws.desc">Fundamentos de servicios cloud, arquitectura en AWS, seguridad y buenas prácticas en la nube.</p>
+            <span class="course-badge" data-i18n="cursos.completado">✓ Completado — ver certificado</span>
+            <span class="course-lang" data-i18n="cursos.lang.es">Curso realizado en español</span>
           </div>
         </div>
-        <div class="course-card" onclick="openCert('certificadosydocs/iot.png')">
+        <div class="course-card" onclick="openCert('certificadosydocs/Iot_Cisco.pdf')">
           <div class="course-icon iot">📡</div>
           <div class="course-body">
-            <p class="course-org">Internet de las Cosas</p>
-            <h3 class="course-name">Fundamentos del IoT</h3>
-            <p class="course-desc">Conectividad de dispositivos, sensores, protocolos de comunicación y aplicaciones prácticas del ecosistema IoT.</p>
-            <span class="course-badge">En progreso...</span>
+            <p class="course-org">Cisco Networking Academy</p>
+            <h3 class="course-name">Introduction to Internet of Things</h3>
+            <p class="course-desc" data-i18n="cursos.iot.desc">IoT y transformación digital: impacto en negocios y gobiernos, automatización, inteligencia artificial, Intent Based Networking y seguridad en el mundo digitalizado.</p>
+            <span class="course-badge" data-i18n="cursos.completado">✓ Completado — ver certificado</span>
+            <span class="course-lang" data-i18n="cursos.lang.en">Curso realizado en inglés</span>
           </div>
         </div>
       </div>
@@ -218,30 +221,30 @@
 
 <!-- Proyectos -->
     <section id="proyectos" class="reveal">
-      <p class="section-label">Trabajo</p>
-      <h2 class="section-title">Proyectos Personales</h2>
+      <p class="section-label" data-i18n="proyectos.label">Trabajo</p>
+      <h2 class="section-title" data-i18n="proyectos.title">Proyectos Personales</h2>
 
       <div class="areas-grid">
 
         <!-- Web -->
         <div class="area-card">
           <div class="area-card-header" style="border-top: 3px solid #3b82f6;">
-            <span class="area-card-label" style="color: #1d4ed8;">🚀 Desarrollo de Software & Web</span>
+            <span class="area-card-label" style="color: #1d4ed8;" data-i18n="proyectos.web.label">🚀 Desarrollo de Software & Web</span>
           </div>
           <div class="area-card-project">
             <div class="project-img-wrap">
-              <img src="certificadosydocs/Casino.png" alt="Casino Virtual" />
+              <img src="Imagenes/Casino.png" alt="Casino Virtual" />
             </div>
             <div class="project-body">
-              <p class="project-number">Destacado</p>
+              <p class="project-number" data-i18n="proyectos.destacado">Destacado</p>
               <h3 class="project-name">Casino Virtual</h3>
-              <p class="project-desc">Plataforma web con autenticación y lógica de juego en tiempo real.</p>
+              <p class="project-desc" data-i18n="proyectos.casino.desc">Plataforma web con autenticación y lógica de juego en tiempo real.</p>
               <div class="project-footer">
                 <ul class="tags">
                   <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JS</li><li class="tag">Express</li><li class="tag">MongoDB</li>
                 </ul>
                 <div class="project-links">
-                  <a onclick="openCasinoModal()">Demo</a>
+                  <a onclick="openCasinoModal()" data-i18n="proyectos.demo">Demo</a>
                   <a href="https://github.com/Chrisp-20/ProyectoWeb" target="_blank">Code</a>
                 </div>
               </div>
@@ -257,14 +260,14 @@
               </div>
               <div class="project-body">
                 <p class="project-number">02</p>
-                <h3 class="project-name">Portafolio</h3>
-                <p class="project-desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y maquetado web.</p>
+                <h3 class="project-name" data-i18n="proyectos.portfolio.name">Portafolio</h3>
+                <p class="project-desc" data-i18n="proyectos.portfolio.desc">Sitio personal para mostrar proyectos y fortalecer conocimientos de diseño y maquetado web.</p>
                 <div class="project-footer">
                   <ul class="tags">
                     <li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li>
                   </ul>
                   <div class="project-links">
-                    <a href="https://chrisp-20.github.io/" target="_blank">Demo</a>
+                    <a href="https://chrisp-20.github.io/" target="_blank" data-i18n="proyectos.demo">Demo</a>
                     <a href="https://github.com/Chrisp-20/Chrisp-20.github.io" target="_blank">Code</a>
                   </div>
                 </div>
@@ -273,69 +276,69 @@
           </div>
 
           <button class="area-card-footer" onclick="toggleExtra('web', this)">
-            <span>Ver todos los proyectos web</span><span class="area-footer-arrow">↓</span>
+            <span data-i18n="proyectos.web.vertodos">Ver todos los proyectos web</span><span class="area-footer-arrow">↓</span>
           </button>
         </div>
 
         <!-- BI -->
         <div class="area-card">
           <div class="area-card-header" style="border-top: 3px solid #10b981;">
-            <span class="area-card-label" style="color: #047857;">📊 Business Intelligence & Big Data</span>
+            <span class="area-card-label" style="color: #047857;" data-i18n="proyectos.bi.label">📊 Business Intelligence & Big Data</span>
           </div>
           <div class="area-card-empty">
             <i class="ti ti-chart-bar" aria-hidden="true"></i>
-            <p>Proyectos próximamente</p>
+            <p data-i18n="proyectos.proximamente">Proyectos próximamente</p>
           </div>
           <div class="area-card-extra" id="extra-bi">
             <div class="area-card-divider"></div>
             <div class="area-card-empty" style="padding: 1.5rem 1rem;">
-              <p>No hay más proyectos aún</p>
+              <p data-i18n="proyectos.nohaymas">No hay más proyectos aún</p>
             </div>
           </div>
           <button class="area-card-footer" onclick="toggleExtra('bi', this)">
-            <span>Ver todos los proyectos BI</span><span class="area-footer-arrow">↓</span>
+            <span data-i18n="proyectos.bi.vertodos">Ver todos los proyectos BI</span><span class="area-footer-arrow">↓</span>
           </button>
         </div>
 
         <!-- Analítica -->
         <div class="area-card">
           <div class="area-card-header" style="border-top: 3px solid #f59e0b;">
-            <span class="area-card-label" style="color: #b45309;">🔍 Analítica Web, Tráfico & Consultoría</span>
+            <span class="area-card-label" style="color: #b45309;" data-i18n="proyectos.analitica.label">🔍 Analítica Web, Tráfico & Consultoría</span>
           </div>
           <div class="area-card-empty">
             <i class="ti ti-search" aria-hidden="true"></i>
-            <p>Proyectos próximamente</p>
+            <p data-i18n="proyectos.proximamente">Proyectos próximamente</p>
           </div>
           <div class="area-card-extra" id="extra-analitica">
             <div class="area-card-divider"></div>
             <div class="area-card-empty" style="padding: 1.5rem 1rem;">
-              <p>No hay más proyectos aún</p>
+              <p data-i18n="proyectos.nohaymas">No hay más proyectos aún</p>
             </div>
           </div>
           <button class="area-card-footer" onclick="toggleExtra('analitica', this)">
-            <span>Ver todos los proyectos de analítica</span><span class="area-footer-arrow">↓</span>
+            <span data-i18n="proyectos.analitica.vertodos">Ver todos los proyectos de analítica</span><span class="area-footer-arrow">↓</span>
           </button>
         </div>
 
         <!-- IoT -->
         <div class="area-card">
           <div class="area-card-header" style="border-top: 3px solid #8b5cf6;">
-            <span class="area-card-label" style="color: #6d28d9;">📡 IoT & TICs</span>
+            <span class="area-card-label" style="color: #6d28d9;" data-i18n="proyectos.iot.label">📡 IoT & TICs</span>
           </div>
           <div class="area-card-project">
             <div class="project-img-wrap">
               <img src="Imagenes/Cryotix.png" alt="Cryotix" />
             </div>
             <div class="project-body">
-              <p class="project-number">Destacado</p>
+              <p class="project-number" data-i18n="proyectos.destacado">Destacado</p>
               <h3 class="project-name">Cryotix</h3>
-              <p class="project-desc">Dispositivo IoT para monitoreo de temperatura orientado a pequeños negocios de alimentos, con carcasa diseñada e impresa en 3D, dashboard en ThingsBoard y alertas en tiempo real.</p>
+              <p class="project-desc" data-i18n="proyectos.cryotix.desc">Dispositivo IoT para monitoreo de temperatura orientado a pequeños negocios de alimentos, con carcasa diseñada e impresa en 3D, dashboard en ThingsBoard y alertas en tiempo real.</p>
               <div class="project-footer">
                 <ul class="tags">
                   <li class="tag">ESP32</li><li class="tag">MQTT</li><li class="tag">ThingsBoard</li><li class="tag">Fusion 360</li>
                 </ul>
                 <div class="project-links">
-                  <a onclick="openCert('certificadosydocs/InformeCryotix.pdf')">Informe</a>
+                  <a onclick="openCert('certificadosydocs/InformeCryotix.pdf')" data-i18n="proyectos.informe">Informe</a>
                   <a href="https://github.com/Chrisp-20/Cryotix" target="_blank">Code</a>
                 </div>
               </div>
@@ -344,11 +347,11 @@
           <div class="area-card-extra" id="extra-iot">
             <div class="area-card-divider"></div>
             <div class="area-card-empty" style="padding: 1.5rem 1rem;">
-              <p>No hay más proyectos aún</p>
+              <p data-i18n="proyectos.nohaymas">No hay más proyectos aún</p>
             </div>
           </div>
           <button class="area-card-footer" onclick="toggleExtra('iot', this)">
-            <span>Ver todos los proyectos IoT</span><span class="area-footer-arrow">↓</span>
+            <span data-i18n="proyectos.iot.vertodos">Ver todos los proyectos IoT</span><span class="area-footer-arrow">↓</span>
           </button>
         </div>
 
@@ -357,10 +360,10 @@
 
     <!-- Colaboración -->
     <section class="collab-section reveal" id="colaborar">
-      <p class="section-label">Colaboración</p>
-      <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
-      <p>Cuéntame qué necesitas y encontramos la mejor forma de trabajar juntos.</p>
-      <button class="btn-collab" onclick="openModal()">Quiero colaborar →</button>
+      <p class="section-label" data-i18n="colab.label">Colaboración</p>
+      <h2 class="section-title" data-i18n="colab.title">¿Tienes un proyecto en mente?</h2>
+      <p data-i18n="colab.desc">Cuéntame qué necesitas y encontramos la mejor forma de trabajar juntos.</p>
+      <button class="btn-collab" onclick="openModal()" data-i18n="colab.btn">Quiero colaborar →</button>
     </section>
 
   </main>
@@ -368,53 +371,53 @@
   <!-- Modal colaborar -->
   <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
     <div class="modal">
-      <p class="modal-eyebrow">Colaboración</p>
-      <h2 class="modal-title">¿En qué puedo ayudarte?</h2>
-      <p class="modal-subtitle">Selecciona el tipo de proyecto que tienes en mente.</p>
+      <p class="modal-eyebrow" data-i18n="modal.eyebrow">Colaboración</p>
+      <h2 class="modal-title" data-i18n="modal.title">¿En qué puedo ayudarte?</h2>
+      <p class="modal-subtitle" data-i18n="modal.subtitle1">Selecciona el tipo de proyecto que tienes en mente.</p>
       <div class="modal-options" id="modal-options-wrap">
         <div class="modal-option" onclick="selectOption(this, 'wordpress')">
           <div class="option-icon">🧩</div>
           <div class="option-body">
-            <p class="option-title">Desarrollo Web Frontend</p>
-            <p class="option-desc">Creación de interfaces responsivas y modernas utilizando HTML, CSS y JavaScript.</p>
+            <p class="option-title" data-i18n="modal.opt1.title">Desarrollo Web Frontend</p>
+            <p class="option-desc" data-i18n="modal.opt1.desc">Creación de interfaces responsivas y modernas utilizando HTML, CSS y JavaScript.</p>
           </div>
           <span class="option-arrow">→</span>
         </div>
         <div class="modal-option" onclick="selectOption(this, 'frontend-backend')">
           <div class="option-icon">⚡</div>
           <div class="option-body">
-            <p class="option-title">Proyectos IoT y Hardware</p>
-            <p class="option-desc">Integración de sensores, microcontroladores y conectividad para soluciones inteligentes.</p>
+            <p class="option-title" data-i18n="modal.opt2.title">Proyectos IoT y Hardware</p>
+            <p class="option-desc" data-i18n="modal.opt2.desc">Integración de sensores, microcontroladores y conectividad para soluciones inteligentes.</p>
           </div>
           <span class="option-arrow">→</span>
         </div>
         <div class="modal-option" onclick="selectOption(this, 'fullstack')">
           <div class="option-icon">🚀</div>
           <div class="option-body">
-            <p class="option-title">Prácticas y Pasantías</p>
-            <p class="option-desc">Disponible para sumarme a equipos de ingeniería y aportar con soluciones técnicas.</p>
+            <p class="option-title" data-i18n="modal.opt3.title">Prácticas y Pasantías</p>
+            <p class="option-desc" data-i18n="modal.opt3.desc">Disponible para sumarme a equipos de ingeniería y aportar con soluciones técnicas.</p>
           </div>
           <span class="option-arrow">→</span>
         </div>
       </div>
       <div class="modal-step2" id="modalStep2" style="display:none">
-        <p class="modal-subtitle">Cuéntame qué necesitas 👇</p>
+        <p class="modal-subtitle" data-i18n="modal.subtitle2">Cuéntame qué necesitas 👇</p>
         <form id="contactForm" novalidate>
-          <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required />
-          <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4" required></textarea>
+          <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required data-i18n-placeholder="modal.placeholder.name" />
+          <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4" required data-i18n-placeholder="modal.placeholder.message"></textarea>
         </form>
-        <p style="font-size: 0.75rem; opacity: 0.65; margin-top: 0.5rem;">🔒 No almaceno ni recolecto estos datos: solo se usan para armar el mensaje que se abre en tu WhatsApp.</p>
+        <p style="font-size: 0.75rem; opacity: 0.65; margin-top: 0.5rem;" data-i18n="modal.privacy">🔒 No almaceno ni recolecto estos datos: solo se usan para armar el mensaje que se abre en tu WhatsApp.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
-        <button class="btn-send" id="btnSend" onclick="sendSelection()" disabled>Continuar →</button>
+        <button class="btn-cancel" onclick="closeModal()" data-i18n="modal.cancel">Cancelar</button>
+        <button class="btn-send" id="btnSend" onclick="sendSelection()" disabled data-i18n="modal.continue">Continuar →</button>
       </div>
     </div>
   </div>
 
   <div class="cert-overlay" id="certOverlay" onclick="closeCertOverlay(event)">
     <div class="cert-box">
-      <a id="certDownload" class="cert-close" href="#" download style="right: 3.5rem;" title="Descargar">⬇</a>
+      <a id="certDownload" class="cert-close" href="#" download style="right: 3.5rem;" title="Descargar" data-i18n-title="cert.download">⬇</a>
       <button class="cert-close" onclick="closeCert()">✕</button>
       <iframe id="certFrame" src="" frameborder="0" style="display:none"></iframe>
       <img id="certImage" src="" style="display:none; width:100%; height:100%; object-fit:contain; padding:1rem;" />
@@ -424,7 +427,7 @@
   <div class="demo-overlay" id="demoOverlay">
     <div class="demo-header">
       <span class="demo-title" id="demoTitle">Demo</span>
-      <button class="demo-close" onclick="closeDemo()">✕ Cerrar</button>
+      <button class="demo-close" onclick="closeDemo()" data-i18n="demo.close">✕ Cerrar</button>
     </div>
     <iframe id="demoFrame" src="" frameborder="0"></iframe>
   </div>
@@ -434,29 +437,29 @@
     <div class="casino-modal">
       <div class="casino-header">
         <span class="casino-emoji">🎰</span>
-        <h3 class="casino-title">Antes de entrar...</h3>
+        <h3 class="casino-title" data-i18n="casino.title">Antes de entrar...</h3>
       </div>
       <div class="casino-alert">
         <span class="casino-alert-icon">⏳</span>
         <div>
-          <p class="casino-alert-title">Servidor en modo reposo</p>
-          <p class="casino-alert-desc">El servidor gratuito puede tardar <strong>de 30 a 40 segundos</strong> en "despertar". Tenga paciencia :D</p>
+          <p class="casino-alert-title" data-i18n="casino.alert.title">Servidor en modo reposo</p>
+          <p class="casino-alert-desc" data-i18n-html="casino.alert.desc">El servidor gratuito puede tardar <strong>de 30 a 40 segundos</strong> en "despertar". Tenga paciencia :D</p>
         </div>
       </div>
       <div class="casino-credentials">
-        <p class="casino-cred-label">🃏 Cuenta de prueba</p>
+        <p class="casino-cred-label" data-i18n="casino.cred.label">🃏 Cuenta de prueba</p>
         <div class="casino-cred-row">
-          <span class="casino-cred-key">Usuario(mail):</span>
+          <span class="casino-cred-key" data-i18n="casino.cred.user">Usuario(mail):</span>
           <code class="casino-cred-val">invitado@invitado.com</code>
         </div>
         <div class="casino-cred-row">
-          <span class="casino-cred-key">Contraseña</span>
+          <span class="casino-cred-key" data-i18n="casino.cred.pass">Contraseña</span>
           <code class="casino-cred-val">invi1234</code>
         </div>
       </div>
       <div class="casino-footer">
-        <button class="casino-btn-cancel" onclick="closeCasinoModal()">Cerrar</button>
-        <a class="casino-btn-demo" href="https://casino-virtual-e4jo.onrender.com/" target="_blank" rel="noopener noreferrer" onclick="closeCasinoModal()">
+        <button class="casino-btn-cancel" onclick="closeCasinoModal()" data-i18n="casino.cancel">Cerrar</button>
+        <a class="casino-btn-demo" href="https://casino-virtual-e4jo.onrender.com/" target="_blank" rel="noopener noreferrer" onclick="closeCasinoModal()" data-i18n="casino.go">
           Ir al Casino Virtual
         </a>
       </div>
@@ -465,7 +468,7 @@
 
   <footer>
     <div class="footer-inner">
-      <p class="footer-copy">© 2026 Christián Pereira Contreras — Ingeniería Civil Informática y Telecomunicaciones</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 Christián Pereira Contreras — Ingeniería Civil Informática y Telecomunicaciones</p>
       <div class="social-row">
         <a href="https://github.com/Chrisp-20" class="social-pill" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/christianpec" class="social-pill" target="_blank">LinkedIn</a>
@@ -474,11 +477,36 @@
     </div>
   </footer>
 
+  <script src="i18n/es.js"></script>
+  <script src="i18n/en.js"></script>
+  <script src="i18n/i18n.js"></script>
   <script src="msi.js"></script>
 
-  <button class="dark-toggle" id="darkToggle" onclick="toggleDark()" aria-label="Cambiar modo">
-    <span id="darkIcon">🌙</span>
-  </button>
+  <div class="options-wrap">
+    <div class="options-panel" id="optionsPanel">
+      <div class="options-group">
+        <p class="options-group-label" data-i18n="options.appearance">Apariencia</p>
+        <button class="options-item" id="themeDarkBtn" onclick="setTheme('dark')">
+          <span>🌙</span><span data-i18n="options.dark">Oscuro</span>
+        </button>
+        <button class="options-item" id="themeLightBtn" onclick="setTheme('light')">
+          <span>☀️</span><span data-i18n="options.light">Claro</span>
+        </button>
+      </div>
+      <div class="options-group">
+        <p class="options-group-label" data-i18n="options.language">Idioma</p>
+        <button class="options-item" id="langEsBtn" onclick="setLang('es')">
+          <span>🇪🇸</span><span>Español</span>
+        </button>
+        <button class="options-item" id="langEnBtn" onclick="setLang('en')">
+          <span>🇺🇸</span><span>English</span>
+        </button>
+      </div>
+    </div>
+    <button class="options-toggle" id="optionsToggle" onclick="toggleOptionsPanel()" aria-label="Opciones" data-i18n-aria-label="options.aria">
+      <span>⚙️</span>
+    </button>
+  </div>
 
 </body>
 </html>
