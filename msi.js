@@ -177,8 +177,6 @@ function toggleExtra(area, btn) {
   const label = btn.querySelector('span:first-child');
   const keys = {
     'web':       'proyectos.web.vertodos',
-    'bi':        'proyectos.bi.vertodos',
-    'analitica': 'proyectos.analitica.vertodos',
     'iot':       'proyectos.iot.vertodos',
   };
   label.textContent = isOpen ? t(keys[area]) : t('proyectos.ocultar');
