@@ -90,7 +90,7 @@ const i18n_en = {
     "modal.error.name": "Name is required",
     "modal.error.message": "Message is required",
     "modal.opt.fallback": "a project",
-    "modal.whatsapp.template": "Hi Christián, I'm {nombre}. I'm interested in collaborating on a {opcion}. {mensaje}",
+    "modal.whatsapp.template": "Hi Christián, I'm {nombre}. I'm interested in collaborating with you on {opcion}. {mensaje}",
 
     "cert.download": "Download",
 
