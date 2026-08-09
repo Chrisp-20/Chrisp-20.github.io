@@ -33,6 +33,7 @@
     <div class="hero" id="inicio">
       <div class="hero-inner">
         <div class="hero-text">
+          <span class="badge" data-i18n="hero.badge">Santiago, Chile 📍</span>
           <h1 data-i18n-html="hero.h1">Armando y creando<br><em>por curiosidad</em><br> y pasión</h1>
           <h2 class="hero-sub" data-i18n="hero.sub">Full Stack · IoT · Sistemas de punta a punta</h2>
           <p class="hero-desc" data-i18n="hero.desc">
@@ -362,8 +363,9 @@
       <div class="modal-step2" id="modalStep2" style="display:none">
         <p class="modal-subtitle" data-i18n="modal.subtitle2">Cuéntame qué necesitas 👇</p>
         <form id="contactForm" novalidate>
-          <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required data-i18n-placeholder="modal.placeholder.name" />
-          <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4" required data-i18n-placeholder="modal.placeholder.message"></textarea>
+          <input type="text" id="clientName" placeholder="Tu nombre" class="modal-input" required maxlength="60" data-i18n-placeholder="modal.placeholder.name" />
+          <textarea id="clientMessage" placeholder="Describe qué necesitas..." class="modal-textarea" rows="4" required maxlength="500" data-i18n-placeholder="modal.placeholder.message"></textarea>
+          <p id="msgCounter" style="font-size: 0.72rem; color: var(--muted); text-align: right; margin-top: -0.5rem; margin-bottom: 0.75rem; font-family: var(--mono);">0/500</p>
         </form>
         <p style="font-size: 0.75rem; opacity: 0.65; margin-top: 0.5rem;" data-i18n="modal.privacy">🔒 No almaceno ni recolecto estos datos: solo se usan para armar el mensaje que se abre en tu WhatsApp.</p>
       </div>
@@ -438,7 +440,7 @@
 
   <script src="i18n/es.js"></script>
   <script src="i18n/en.js"></script>
-  <script src="i18n/I18n.js"></script>
+  <script src="i18n/i18n.js"></script>
   <script src="msi.js"></script>
 
   <div class="options-wrap">

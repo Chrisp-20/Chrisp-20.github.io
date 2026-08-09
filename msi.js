@@ -30,11 +30,23 @@ function resetModal() {
   document.getElementById('modal-options-wrap').style.display = 'flex';
   document.getElementById('clientName').value = '';
   document.getElementById('clientMessage').value = '';
+  const counter = document.getElementById('msgCounter');
+  if (counter) counter.textContent = '0/500';
 }
 
 function handleOverlayClick(e) {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const messageEl = document.getElementById('clientMessage');
+  const counter = document.getElementById('msgCounter');
+  if (messageEl && counter) {
+    messageEl.addEventListener('input', () => {
+      counter.textContent = `${messageEl.value.length}/500`;
+    });
+  }
+});
 
 function selectOption(el, value) {
   document.querySelectorAll('.modal-option').forEach(o => o.classList.remove('selected'));
@@ -51,6 +63,10 @@ function sendSelection() {
     document.getElementById('btnSend').textContent = t('modal.sendwhatsapp');
     document.getElementById('btnSend').disabled = false;
   } else {
+    const btnSend = document.getElementById('btnSend');
+    if (btnSend.disabled) return; 
+    btnSend.disabled = true;
+
     const nameEl    = document.getElementById('clientName');
     const messageEl = document.getElementById('clientMessage');
 
@@ -74,7 +90,7 @@ function sendSelection() {
     if (!nameEl.value.trim())    showError(nameEl, t('modal.error.name'));
     if (!messageEl.value.trim()) showError(messageEl, t('modal.error.message'));
 
-    if (!valid) return;
+    if (!valid) { btnSend.disabled = false; return; }
 
     const opcionLabels = {
       'wordpress':        t('modal.opt1.title'),
@@ -83,8 +99,9 @@ function sendSelection() {
     };
 
     const opcionElegida = opcionLabels[selectedOption] || t('modal.opt.fallback');
-    const nombre  = nameEl.value.trim();
-    const mensaje = messageEl.value.trim();
+    
+    const nombre  = nameEl.value.trim().slice(0, 60);
+    const mensaje = messageEl.value.trim().slice(0, 500);
 
     const texto = t('modal.whatsapp.template')
       .replace('{nombre}', nombre)
