@@ -46,6 +46,7 @@ const i18n_es = {
     "cursos.cpt.desc": "Simulación y configuración de redes, protocolos TCP/IP, enrutamiento y switching en entornos virtuales.",
     "cursos.aws.desc": "Fundamentos de servicios cloud, arquitectura en AWS, seguridad y buenas prácticas en la nube.",
     "cursos.iot.desc": "IoT y transformación digital: impacto en negocios y gobiernos, automatización, inteligencia artificial, Intent Based Networking y seguridad en el mundo digitalizado.",
+    "cursos.cys.desc": "Fundamentos de ciberseguridad, amenazas y vulnerabilidades, y principios de protección de sistemas y redes.",
     "cursos.completado": "✓ Completado — ver certificado",
     "cursos.lang.es": "Curso realizado en español",
     "cursos.lang.en": "Curso realizado en inglés",
